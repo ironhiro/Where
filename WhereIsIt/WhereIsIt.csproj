@@ -30,6 +30,9 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -52,6 +55,20 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.92" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="5.3.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="MVVM\" />
+	  <None Remove="MVVM\Model\" />
+	  <None Remove="MVVM\View\" />
+	  <None Remove="MVVM\ViewModel\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="MVVM\" />
+	  <Folder Include="MVVM\Model\" />
+	  <Folder Include="MVVM\View\" />
+	  <Folder Include="MVVM\ViewModel\" />
+	</ItemGroup>
 </Project>
