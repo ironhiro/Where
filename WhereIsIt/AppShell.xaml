@@ -5,24 +5,33 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WhereIsIt"
     xmlns:view="clr-namespace:WhereIsIt.MVVM.View"
+    Shell.BackgroundColor="Transparent"
+    Shell.TitleColor="{StaticResource Primary}"
+    Shell.NavBarHasShadow="True"
+    
     Shell.FlyoutBehavior="Disabled">
-    <Shell.Resources>
-        <ResourceDictionary Source="Resources/Styles/IconDictionaries.xaml" />
-    </Shell.Resources>
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="*">
+            <Label TextColor="{StaticResource Primary}" x:Name="myLabel" FontSize="24" FontFamily="MBCFont"  />
+        </Grid>
+    </Shell.TitleView>
     <TabBar>
-        <Tab Title="홈">
+        <Tab Title="홈"
+             Route="Home">
             <Tab.Icon>
                 <FontImageSource FontFamily="FreeSolid" Glyph="{StaticResource IconHouse}" />
             </Tab.Icon>
             <ShellContent Title="홈" ContentTemplate="{DataTemplate view:MainView}" />
         </Tab>
-        <Tab Title="화장실">
+        <Tab Title="화장실"
+             Route="Toilet">
             <Tab.Icon>
                 <FontImageSource FontFamily="FreeSolid" Glyph="{StaticResource IconToiletPaper}" />
             </Tab.Icon>
             <ShellContent Title="화장실" ContentTemplate="{DataTemplate view:ToiletView}" />
         </Tab>
-        <Tab Title="설정">
+        <Tab Title="설정"
+             Route="Setting">
             <Tab.Icon>
                 <FontImageSource FontFamily="FreeSoild" Glyph="{StaticResource IconGear}" />
             </Tab.Icon>

@@ -2,10 +2,61 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WhereIsIt.MVVM.View.PreferenceView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout
+        Spacing="20">
+        <!-- Account -->
+        <!-- 설정 내용 -->
+        <Frame BackgroundColor="Transparent"
+                BorderColor="LightGray"
+                Margin="15,15,15,0">
+            <Grid ColumnDefinitions=".2*, .8*">
+                <Image WidthRequest="24" HeightRequest="24"
+                       HorizontalOptions="Center">
+                    <Image.Source>
+                        <FontImageSource
+                            Color="{StaticResource Primary}"
+                            Glyph="{StaticResource IconPerson}"
+                                         FontFamily="FreeSolid"/>
+                    </Image.Source>
+                </Image>
+                <Label Grid.Column="1" VerticalTextAlignment="Center" HorizontalOptions="Center" FontSize="16" Text="일반 설정"/>
+                    
+            </Grid>
+        </Frame>
+        <Frame BackgroundColor="Transparent"
+                BorderColor="LightGray"
+                Margin="15,0">
+            <Grid ColumnDefinitions=".2*, .8*">
+                <Image WidthRequest="24" HeightRequest="24"
+                       HorizontalOptions="Center">
+                    <Image.Source>
+                        <FontImageSource
+                            Color="Green"
+                            Glyph="{StaticResource IconDollarSign}"
+                                         FontFamily="FreeSolid"/>
+                    </Image.Source>
+                </Image>
+                <Label Grid.Column="1" VerticalTextAlignment="Center" HorizontalOptions="Center" FontSize="16" Text="결제 설정"/>
+                    
+            </Grid>
+        </Frame>
+        <Frame BackgroundColor="Transparent"
+                BorderColor="LightGray"
+                Margin="15,0">
+            <Grid ColumnDefinitions=".2*, .8*">
+                <Image WidthRequest="24" HeightRequest="24"
+                       HorizontalOptions="Center">
+                    <Image.Source>
+                        <FontImageSource
+                            Color="YellowGreen"
+                            Glyph="{StaticResource IconBell}"
+                                         FontFamily="FreeSolid"/>
+                    </Image.Source>
+                </Image>
+                <Label Grid.Column="1" VerticalTextAlignment="Center" HorizontalOptions="Center" FontSize="16" Text="알림 설정"/>
+                    
+            </Grid>
+        </Frame>
     </VerticalStackLayout>
+    <!-- Logo -->
 </ContentPage>
