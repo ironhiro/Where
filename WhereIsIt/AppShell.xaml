@@ -6,33 +6,28 @@
     xmlns:local="clr-namespace:WhereIsIt"
     xmlns:view="clr-namespace:WhereIsIt.MVVM.View"
     Shell.FlyoutBehavior="Disabled">
-
+    <Shell.Resources>
+        <ResourceDictionary Source="Resources/Styles/IconDictionaries.xaml" />
+    </Shell.Resources>
     <TabBar>
-        <Tab Title="Home">
-            <ShellContent
-                Title="Home"
-        ContentTemplate="{DataTemplate view:MainView}"
-         />
-
+        <Tab Title="홈">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FreeSolid" Glyph="{StaticResource IconHouse}" />
+            </Tab.Icon>
+            <ShellContent Title="홈" ContentTemplate="{DataTemplate view:MainView}" />
         </Tab>
-        <Tab Title="Toilet">
-            <ShellContent
-                Title="Toilet"
-                
-        ContentTemplate="{DataTemplate view:ToiletView}"
-         />
-
+        <Tab Title="화장실">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FreeSolid" Glyph="{StaticResource IconToiletPaper}" />
+            </Tab.Icon>
+            <ShellContent Title="화장실" ContentTemplate="{DataTemplate view:ToiletView}" />
         </Tab>
-        <Tab Title="Setting">
-            <ShellContent
-                Title="Setting"
-        ContentTemplate="{DataTemplate view:PreferenceView}"
-         />
-
+        <Tab Title="설정">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FreeSoild" Glyph="{StaticResource IconGear}" />
+            </Tab.Icon>
+            <ShellContent Title="설정" ContentTemplate="{DataTemplate view:PreferenceView}" />
         </Tab>
-
     </TabBar>
-    
-
 </Shell>
 

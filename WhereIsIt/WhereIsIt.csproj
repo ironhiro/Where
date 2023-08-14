@@ -64,11 +64,17 @@
 	  <None Remove="MVVM\Model\" />
 	  <None Remove="MVVM\View\" />
 	  <None Remove="MVVM\ViewModel\" />
+	  <None Remove="Resources\Raw\toilets.json" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="MVVM\" />
 	  <Folder Include="MVVM\Model\" />
 	  <Folder Include="MVVM\View\" />
 	  <Folder Include="MVVM\ViewModel\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="Resources\Styles\IconDictionaries.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>
