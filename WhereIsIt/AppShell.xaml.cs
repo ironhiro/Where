@@ -12,6 +12,13 @@ public partial class AppShell : Shell
     {
         base.OnNavigated(args);
 
+        //args.Current.Location
+        var shellItem = Shell.Current.CurrentItem;
+
+        //string title = shellItem.Title;
+
+
+        /*
         var shellItem = Shell.Current?.CurrentItem;
         string title = shellItem?.Title;
         int iterationCount = 0;
@@ -26,6 +33,7 @@ public partial class AppShell : Shell
         }
 
         myLabel.Text = title;
+        */
     }
 }
 

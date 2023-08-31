@@ -6,32 +6,38 @@
     xmlns:local="clr-namespace:WhereIsIt"
     xmlns:view="clr-namespace:WhereIsIt.MVVM.View"
     Shell.BackgroundColor="Transparent"
-    Shell.TitleColor="{StaticResource Primary}"
+    Shell.FlyoutBehavior="Disabled"
     Shell.NavBarHasShadow="True"
-    
-    Shell.FlyoutBehavior="Disabled">
+    Shell.TitleColor="{StaticResource Primary}">
     <Shell.TitleView>
         <Grid ColumnDefinitions="*">
-            <Label TextColor="{StaticResource Primary}" x:Name="myLabel" FontSize="24" FontFamily="MBCFont"  />
+            <Label
+                x:Name="myLabel"
+                FontFamily="MBCFont"
+                FontSize="24"
+                TextColor="{StaticResource Primary}" />
         </Grid>
     </Shell.TitleView>
     <TabBar>
-        <Tab Title="홈"
-             Route="Home">
+        <Tab Title="홈" Route="Home">
             <Tab.Icon>
                 <FontImageSource FontFamily="FreeSolid" Glyph="{StaticResource IconHouse}" />
             </Tab.Icon>
             <ShellContent Title="홈" ContentTemplate="{DataTemplate view:MainView}" />
         </Tab>
-        <Tab Title="화장실"
-             Route="Toilet">
+        <Tab Title="화장실" Route="Toilet">
             <Tab.Icon>
                 <FontImageSource FontFamily="FreeSolid" Glyph="{StaticResource IconToiletPaper}" />
             </Tab.Icon>
             <ShellContent Title="화장실" ContentTemplate="{DataTemplate view:ToiletView}" />
         </Tab>
-        <Tab Title="설정"
-             Route="Setting">
+        <Tab Title="알림" Route="Notification">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FreeSolid" Glyph="{StaticResource IconBell}" />
+            </Tab.Icon>
+            <ShellContent Title="알림" ContentTemplate="{DataTemplate view:NotificationView}" />
+        </Tab>
+        <Tab Title="설정" Route="Setting">
             <Tab.Icon>
                 <FontImageSource FontFamily="FreeSoild" Glyph="{StaticResource IconGear}" />
             </Tab.Icon>

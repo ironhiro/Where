@@ -67,12 +67,9 @@
 	  <None Remove="Resources\Raw\toilets.json" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="MVVM\" />
-	  <Folder Include="MVVM\Model\" />
-	  <Folder Include="MVVM\View\" />
-	  <Folder Include="MVVM\ViewModel\" />
-	</ItemGroup>
-	<ItemGroup>
+	  <MauiXaml Update="MVVM\View\NotificationView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\IconDictionaries.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
